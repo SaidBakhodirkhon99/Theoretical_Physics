@@ -1,0 +1,1316 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     57407,       1308]
+NotebookOptionsPosition[     54220,       1258]
+NotebookOutlinePosition[     54687,       1276]
+CellTagsIndexPosition[     54644,       1273]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Quit", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{3.947572921102996*^9, 3.947573925947242*^9, 
+  3.947578778861474*^9},
+ CellLabel->"In[90]:=",ExpressionUUID->"dacce11e-05cd-469a-adfa-a09cee30eb9f"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Lambda]", " ", "=", " ", 
+   RowBox[{"\[Alpha]", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["xp", "2"], "-", "1"}], ")"}], 
+     RowBox[{"-", "q"}]], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"xp", "+", "y"}], ")"}], 
+     RowBox[{"2", "q"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Eta]", " ", "=", " ", 
+   RowBox[{"\[Alpha]", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["xp", "2"], "-", "1"}], ")"}], 
+     RowBox[{"-", "q"}]], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"xp", "-", "y"}], ")"}], 
+     RowBox[{"2", "q"}]]}]}], ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.848456576819295*^9, 3.848456650729162*^9}, {
+   3.84845671647018*^9, 3.848457113318383*^9}, {3.84845913959344*^9, 
+   3.848459151363513*^9}, 3.848459315424493*^9, {3.848465349236598*^9, 
+   3.8484653573059673`*^9}, 3.9475739586224127`*^9, 3.947578781945333*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"b9cb99ec-1252-49a0-94bb-3ebf4cf23a0f"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"bp", " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"xp", "+", "1"}], ")"}], "q"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"y", 
+       RowBox[{"(", 
+        RowBox[{"\[Lambda]", "+", "\[Eta]"}], ")"}]}], "-", 
+      RowBox[{"(", 
+       RowBox[{"\[Lambda]", "-", "\[Eta]"}], ")"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bm", " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"xp", "-", "1"}], ")"}], "q"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"y", 
+       RowBox[{"(", 
+        RowBox[{"\[Lambda]", "+", "\[Eta]"}], ")"}]}], "+", 
+      RowBox[{"(", 
+       RowBox[{"\[Lambda]", "-", "\[Eta]"}], ")"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ap", " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"xp", "+", "1"}], ")"}], "q"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"xp", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"\[Lambda]", " ", "\[Eta]"}]}], ")"}]}], "+", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"\[Lambda]", " ", "\[Eta]"}]}], ")"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"am", " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"xp", "-", "1"}], ")"}], "q"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"xp", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"\[Lambda]", " ", "\[Eta]"}]}], ")"}]}], "-", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"\[Lambda]", " ", "\[Eta]"}]}], ")"}]}], ")"}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.848459389326144*^9, 3.848459394611526*^9}, {
+  3.84846535991713*^9, 3.8484653736326833`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"cf927249-3818-4803-a1a0-177c6428f1a1"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Ak", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"ap", " ", "am"}], " ", "+", " ", 
+    RowBox[{"bp", " ", "bm"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Bk", " ", "=", " ", 
+   RowBox[{
+    SuperscriptBox["ap", "2"], "+", 
+    SuperscriptBox["bp", "2"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Ck", "=", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"xp", "+", "1"}], ")"}], "q"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"xp", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          SuperscriptBox["y", "2"]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{"\[Lambda]", "+", "\[Eta]"}], ")"}], "ap"}], "+", 
+       RowBox[{"y", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["xp", "2"], "-", "1"}], ")"}], 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"\[Lambda]", " ", "\[Eta]"}]}], ")"}], " ", "bp"}]}], 
+      ")"}]}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", " ", "=", " ", 
+   RowBox[{"1", "-", 
+    FractionBox[
+     RowBox[{"2", "m"}], "r"], "+", 
+    FractionBox[
+     SuperscriptBox["ast", "2"], 
+     SuperscriptBox["r", "2"]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"B", " ", "=", " ", 
+   RowBox[{"A", " ", "+", " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[Sigma]", "2"], 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+     SuperscriptBox["r", "2"]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"F", " ", "=", " ", 
+   FractionBox["Ak", "Bk"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]", " ", "=", " ", 
+   RowBox[{"2", 
+    RowBox[{"(", 
+     RowBox[{"ast", "-", 
+      FractionBox[
+       RowBox[{"\[Sigma]", " ", "Ck"}], "Ak"]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"exg2", " ", "=", " ", 
+   RowBox[{
+    FractionBox["1", "4"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       FractionBox["m", "\[Sigma]"]}], ")"}], "2"], " ", 
+    FractionBox["Ak", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["xp", "2"], "-", "1"}], ")"}], "\[Delta]"]], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["xp", "2"], "-", "1"}], 
+       RowBox[{
+        SuperscriptBox["xp", "2"], "-", 
+        SuperscriptBox["y", "2"]}]], ")"}], 
+     SuperscriptBox["\[Delta]", "2"]]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.848457157062574*^9, 3.848457341292352*^9}, {
+   3.848457435924491*^9, 3.8484576089556026`*^9}, {3.848457639678595*^9, 
+   3.8484577014956617`*^9}, {3.848457748311845*^9, 3.848457944943832*^9}, 
+   3.848459397088305*^9, {3.84846537590233*^9, 3.84846539041487*^9}, {
+   3.947573693346066*^9, 3.947573700260948*^9}, {3.947582492425178*^9, 
+   3.947582546125224*^9}, {3.9475827166874*^9, 3.9475827170115*^9}, {
+   3.94758277247262*^9, 3.947582772618589*^9}, {3.9475829838471317`*^9, 
+   3.947582985071308*^9}, {3.9475833136935053`*^9, 3.9475833138322167`*^9}, {
+   3.947583365310574*^9, 3.9475833654352617`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"1533019f-4291-4b58-81b1-d6a45b862f38"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.704881636649209*^9, 3.704881636775217*^9}, {
+   3.827464555720906*^9, 3.827464563457407*^9}, {3.827465745376608*^9, 
+   3.827465797483253*^9}, {3.827465941062344*^9, 3.827465942397743*^9}, {
+   3.82746597379096*^9, 3.827466069192244*^9}, 3.827466649176317*^9, {
+   3.827986078299813*^9, 3.827986094186748*^9}, {3.847419108856202*^9, 
+   3.8474191253244963`*^9}, {3.848118628420319*^9, 3.8481186370857563`*^9}, {
+   3.848297320691874*^9, 3.848297346601674*^9}, {3.848297392727136*^9, 
+   3.8482974325937767`*^9}, {3.848458236759826*^9, 
+   3.8484582513823647`*^9}},ExpressionUUID->"886c3b3f-de73-4440-9101-\
+8f97773aa9b6"],
+
+Cell[TextData[StyleBox["Metric Components", "Text",
+ FontWeight->"Bold",
+ FontVariations->{"Underline"->True}]], "Text",
+ CellChangeTimes->{
+  3.848458260804501*^9},ExpressionUUID->"554d4e44-6d33-483b-ad15-\
+cf13ef8138c5"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"gtt", "=", 
+   RowBox[{"-", "F"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"grr", "=", 
+   RowBox[{
+    FractionBox["exg2", "F"], 
+    FractionBox["B", "A"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gthth", "=", 
+   RowBox[{
+    SuperscriptBox["r", "2"], 
+    FractionBox["exg2", "F"], "B"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"gpp", "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["r", "2"], "F"], "A", " ", 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], "-", 
+    RowBox[{"F", " ", 
+     SuperscriptBox["\[Omega]", "2"]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gtp", "=", 
+   RowBox[{"F", " ", "\[Omega]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.704881636649209*^9, 3.704881636775217*^9}, {
+   3.827464555720906*^9, 3.827464563457407*^9}, {3.827465745376608*^9, 
+   3.827465797483253*^9}, {3.827465941062344*^9, 3.827465942397743*^9}, {
+   3.82746597379096*^9, 3.827466069192244*^9}, 3.827466649176317*^9, {
+   3.827986078299813*^9, 3.827986094186748*^9}, {3.847419108856202*^9, 
+   3.8474191253244963`*^9}, {3.848118628420319*^9, 3.8481186370857563`*^9}, {
+   3.848297320691874*^9, 3.848297346601674*^9}, {3.848297392727136*^9, 
+   3.8482974325937767`*^9}, {3.848458282799617*^9, 3.8484582832284102`*^9}, {
+   3.848458326966185*^9, 3.84845847836338*^9}, {3.848458519414538*^9, 
+   3.848458531980022*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"2fba5b45-fdd5-45ad-8b32-3b09c871882c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\[Sigma]", " ", "=", " ", 
+     RowBox[{"m", 
+      SqrtBox[
+       RowBox[{"1", "-", 
+        SuperscriptBox["a", "2"]}]]}]}], ";", " ", 
+    RowBox[{"q", " ", "=", " ", 
+     RowBox[{"\[Delta]", " ", "-", " ", "1"}]}], ";", " ", 
+    RowBox[{"\[Alpha]", " ", "=", " ", 
+     FractionBox["a", 
+      RowBox[{"1", "+", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         SuperscriptBox["a", "2"]}]], " "}]]}], ";"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"xp", "=", 
+     FractionBox[
+      RowBox[{"r", "-", "m"}], "\[Sigma]"]}], ";", 
+    RowBox[{"y", "=", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"m", " ", "=", 
+      FractionBox["1", 
+       RowBox[{"1", "+", 
+        RowBox[{"q", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           SuperscriptBox["a", "2"]}]], " "}]}]]}], ";", " ", 
+     RowBox[{"ast", " ", "=", " ", 
+      RowBox[{"a", " ", "m"}]}], " ", ";"}], "*)"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.8490772835150948`*^9, 3.849077293867316*^9}, {
+   3.947568630962829*^9, 3.947568685968813*^9}, 3.947570217351398*^9, {
+   3.947574123523879*^9, 3.947574150338006*^9}, 3.947574843550097*^9, {
+   3.947577769876567*^9, 3.947577775859245*^9}, {3.947578454802712*^9, 
+   3.94757847159438*^9}, 3.947578803086772*^9, {3.947728842972286*^9, 
+   3.947728881037702*^9}, 3.947732454445525*^9, {3.947732632471641*^9, 
+   3.947732638283533*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"0a1bccaf-053d-4501-9965-93d22fed4df6"],
+
+Cell[TextData[StyleBox["Contravariant Metric Components",
+ FontWeight->"Bold",
+ FontVariations->{"Underline"->True}]], "Text",
+ CellChangeTimes->{{3.84829999548375*^9, 
+  3.8483000050850677`*^9}},ExpressionUUID->"52157d8e-5c76-4685-81da-\
+ff32d252c4e3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"gurr", "=", 
+   RowBox[{"1", "/", "grr"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"guthth", "=", 
+   RowBox[{"1", "/", "gthth"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.791743661775567*^9, 3.7917436717443976`*^9}, {
+   3.7917487779081464`*^9, 3.791748786815792*^9}, 3.844942337547921*^9},
+ CellLabel->"In[21]:=",ExpressionUUID->"35f76944-e9e1-4f20-be3c-a1c9f26be57e"],
+
+Cell[TextData[StyleBox["Metric Derivatives (first)",
+ FontWeight->"Bold",
+ FontVariations->{"Underline"->True}]], "Text",
+ CellChangeTimes->{{3.791891708871218*^9, 3.7918917268153076`*^9}, {
+   3.848297867790675*^9, 3.8482978735407677`*^9}, 
+   3.848466077480327*^9},ExpressionUUID->"43056800-6ec4-4ada-8577-\
+8a51e99ad27d"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dgttdr", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"gtt", ",", "r"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgrrdr", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"grr", ",", "r"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgththdr", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"gthth", ",", "r"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgppdr", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"gpp", ",", "r"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgtpdr", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"gtp", ",", "r"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgttdth", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"gtt", ",", "\[Theta]"}], " ", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgrrdth", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"grr", ",", "\[Theta]"}], " ", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgththdth", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"gthth", ",", "\[Theta]"}], " ", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgppdth", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"gpp", ",", "\[Theta]"}], "]"}]}], " ", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgtpdth", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"gtp", ",", "\[Theta]"}], " ", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.791743713118186*^9, 3.791743822529518*^9}, {
+   3.791914192246465*^9, 3.791914192721443*^9}, {3.7919150302153826`*^9, 
+   3.79191505089266*^9}, {3.8482978369747887`*^9, 3.8482978524266787`*^9}, {
+   3.848297888420574*^9, 3.84829788922722*^9}, {3.848297943319737*^9, 
+   3.848297975545278*^9}, {3.848298027307002*^9, 3.84829804142097*^9}, {
+   3.84829819193768*^9, 3.848298204863121*^9}, {3.848301708325378*^9, 
+   3.848301756961917*^9}, {3.848466671299139*^9, 3.84846672446385*^9}, {
+   3.848466791716007*^9, 3.8484668254974422`*^9}, {3.848466875690961*^9, 
+   3.8484668800471888`*^9}, 3.848467009719717*^9, {3.848467069892625*^9, 
+   3.84846708460651*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"1c2b067c-2498-4235-9334-86f727d5075a"],
+
+Cell[TextData[StyleBox["Metric Derivatives (second)",
+ FontWeight->"Bold",
+ FontVariations->{"Underline"->True}]], "Text",
+ CellChangeTimes->{{3.848297992936556*^9, 
+  3.848297998055064*^9}},ExpressionUUID->"311dab83-c16f-41b7-bb39-\
+09b4940bbb28"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dgttdr2", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"dgttdr", ",", "r"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgppdr2", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"dgppdr", ",", "r"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dgtpdr2", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"dgtpdr", ",", "r"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.848301729472355*^9, 3.848301761247904*^9}, {
+  3.8484668050119247`*^9, 3.84846680961157*^9}, {3.848466884040308*^9, 
+  3.848466920495556*^9}, {3.848467087488632*^9, 3.848467094392359*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"3429f6b9-6bd6-451c-bbd4-bd4d38011455"],
+
+Cell[TextData[StyleBox["Code Fomat",
+ FontWeight->"Bold",
+ FontVariations->{"Underline"->True}]], "Text",
+ CellChangeTimes->{{3.848297992936556*^9, 3.848297998055064*^9}, {
+  3.947732804070486*^9, 
+  3.947732817549744*^9}},ExpressionUUID->"93bb8417-0937-49fb-a8cc-\
+e52d81fac35b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Theta]", " ", "=", " ", "th"}], ";", " ", 
+   RowBox[{"\[Sigma]", " ", "=", " ", "sigpar"}], ";", " ", 
+   RowBox[{"q", " ", "=", " ", "qpar"}], ";", " ", 
+   RowBox[{"m", " ", "=", " ", "mpar"}], ";", " ", 
+   RowBox[{"\[Alpha]", " ", "=", " ", "alp"}], ";", " ", 
+   RowBox[{"\[Delta]", " ", "=", " ", "delp"}], ";", " ", 
+   RowBox[{"a", " ", "=", " ", "apar"}], ";", " ", 
+   RowBox[{"ast", " ", "=", "ast"}], ";"}], "\[IndentingNewLine]"}]], "Input",\
+
+ CellChangeTimes->{{3.8495774612644453`*^9, 3.84957747529478*^9}, {
+   3.850015567483814*^9, 3.850015577762719*^9}, 3.856270319741191*^9, {
+   3.947732897383251*^9, 3.947732984010716*^9}, {3.94773301653902*^9, 
+   3.947733051732313*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"b50dd0f8-16be-4be4-852e-467a8f0237b4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]], "Input",
+ CellLabel->"In[42]:=",ExpressionUUID->"0da96ad6-d93a-482c-986a-46dab74afb48"],
+
+Cell[BoxData[
+ RowBox[{"<<", " ", "OptimizeExpressionToC.m"}]], "Input",
+ CellLabel->"In[43]:=",ExpressionUUID->"278cf3a5-38a8-49ff-af04-aee9dfe0a4d1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OptimizeExpressionToC", "[", 
+   RowBox[{"{", 
+    RowBox[{"gtt", ",", "grr", ",", "gthth", ",", "gpp", ",", "gtp"}], "}"}], 
+   "]"}], ";"}]], "Input",
+ CellLabel->"In[44]:=",ExpressionUUID->"31d65d0a-dc7c-40ca-af17-9ed4a194e8f8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Sqrt\>\"", "\[Rule]", "\"\<sqrt\>\""}], ",", " ", 
+      RowBox[{"\"\<Power(E,\>\"", "\[Rule]", "\"\<exp(\>\""}], ",", 
+      RowBox[{"\"\<Power\>\"", "\[Rule]", "\"\<pow\>\""}], ",", 
+      RowBox[{"\"\<Sin\>\"", "\[Rule]", "\"\<sin\>\""}], ",", 
+      RowBox[{"\"\<Cos\>\"", "\[Rule]", "\"\<cos\>\""}], ",", 
+      RowBox[{"\"\<out(0)\>\"", "\[Rule]", "\"\<gtt\>\""}], ",", 
+      RowBox[{"\"\<out(1)\>\"", "\[Rule]", "\"\<grr\>\""}], ",", 
+      RowBox[{"\"\<out(2)\>\"", "\[Rule]", "\"\<gthth\>\""}], ",", 
+      RowBox[{"\"\<out(3)\>\"", "\[Rule]", "\"\<gpp\>\""}], ",", 
+      RowBox[{"\"\<out(4)\>\"", "\[Rule]", "\"\<gtp\>\""}]}], "}"}]}], "]"}], 
+  "]"}]], "Input",
+ CellLabel->"In[45]:=",ExpressionUUID->"770bf068-a9fb-4644-a99e-4263da69eda1"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"double t2 = -mpar;\"\>"},
+    {"\<\"double t3 = r + t2;\"\>"},
+    {"\<\"double t5 = 1/sigpar;\"\>"},
+    {"\<\"double t6 = t3*t5;\"\>"},
+    {"\<\"double t11 = pow(t3,2);\"\>"},
+    {"\<\"double t12 = pow(sigpar,-2);\"\>"},
+    {"\<\"double t13 = t11*t12;\"\>"},
+    {"\<\"double t14 = -1 + t13;\"\>"},
+    {"\<\"double t15 = -qpar;\"\>"},
+    {"\<\"double t16 = pow(t14,t15);\"\>"},
+    {"\<\"double t17 = cos(th);\"\>"},
+    {"\<\"double t20 = 2*qpar;\"\>"},
+    {"\<\"double t18 = -t17;\"\>"},
+    {"\<\"double t19 = t18 + t6;\"\>"},
+    {"\<\"double t21 = pow(t19,t20);\"\>"},
+    {"\<\"double t22 = alp*t16*t21;\"\>"},
+    {"\<\"double t23 = t17 + t6;\"\>"},
+    {"\<\"double t24 = pow(t23,t20);\"\>"},
+    {"\<\"double t26 = alp*t16*t24;\"\>"},
+    {"\<\"double t27 = t22 + t26;\"\>"},
+    {"\<\"double t28 = t17*t27;\"\>"},
+    {"\<\"double t7 = -1 + t6;\"\>"},
+    {"\<\"double t8 = pow(t7,qpar);\"\>"},
+    {"\<\"double t9 = 1 + t6;\"\>"},
+    {"\<\"double t10 = pow(t9,qpar);\"\>"},
+    {"\<\"double t33 = pow(alp,2);\"\>"},
+    {"\<\"double t34 = -2*qpar;\"\>"},
+    {"\<\"double t35 = pow(t14,t34);\"\>"},
+    {"\<\"double t36 = -(t21*t24*t33*t35);\"\>"},
+    {"\<\"double t37 = 1 + t36;\"\>"},
+    {"\<\"double t38 = t3*t37*t5;\"\>"},
+    {"\<\"double t25 = -(alp*t16*t24);\"\>"},
+    {"\<\"double t29 = t22 + t25 + t28;\"\>"},
+    {"\<\"double t44 = pow(t9,t20);\"\>"},
+    {"\<\"double t40 = t21*t24*t33*t35;\"\>"},
+    {"\<\"double t41 = 1 + t38 + t40;\"\>"},
+    {"\<\"double t45 = pow(t29,2);\"\>"},
+    {"\<\"double t46 = t44*t45;\"\>"},
+    {"\<\"double t47 = pow(t41,2);\"\>"},
+    {"\<\"double t48 = t44*t47;\"\>"},
+    {"\<\"double t49 = t46 + t48;\"\>"},
+    {"\<\"double t52 = pow(ast,2);\"\>"},
+    {"\<\"double t53 = pow(r,-2);\"\>"},
+    {"\<\"double t54 = t52*t53;\"\>"},
+    {"\<\"double t55 = 1/r;\"\>"},
+    {"\<\"double t56 = -2*mpar*t55;\"\>"},
+    {"\<\"double t59 = -delp;\"\>"},
+    {"\<\"double t60 = pow(t14,t59);\"\>"},
+    {"\<\"double t61 = mpar*t5;\"\>"},
+    {"\<\"double t62 = 1 + t61;\"\>"},
+    {"\<\"double t63 = pow(t62,2);\"\>"},
+    {"\<\"double t64 = pow(t17,2);\"\>"},
+    {"\<\"double t65 = -t64;\"\>"},
+    {"\<\"double t66 = t13 + t65;\"\>"},
+    {"\<\"double t67 = 1/t66;\"\>"},
+    {"\<\"double t68 = t14*t67;\"\>"},
+    {"\<\"double t69 = pow(delp,2);\"\>"},
+    {"\<\"double t70 = pow(t68,t69);\"\>"},
+    {"\<\"double t71 = pow(sigpar,2);\"\>"},
+    {"\<\"double t72 = sin(th);\"\>"},
+    {"\<\"double t73 = pow(t72,2);\"\>"},
+    {"\<\"double t74 = t53*t71*t73;\"\>"},
+    {"\<\"double t75 = 1 + t54 + t56 + t74;\"\>"},
+    {"\<\"double t30 = -(alp*t16*t21);\"\>"},
+    {"\<\"double t31 = t26 + t28 + t30;\"\>"},
+    {"\<\"double t32 = t10*t29*t31*t8;\"\>"},
+    {"\<\"double t39 = -1 + t36 + t38;\"\>"},
+    {"\<\"double t42 = t10*t39*t41*t8;\"\>"},
+    {"\<\"double t43 = t32 + t42;\"\>"},
+    {"\<\"double t50 = 1/t49;\"\>"},
+    {"\<\"double t57 = 1 + t54 + t56;\"\>"},
+    {"\<\"double t77 = pow(r,2);\"\>"},
+    {"\<\"double t83 = 1/t43;\"\>"},
+    {"\<\"double t79 = t10*t14*t17*t29*t37;\"\>"},
+    {"\<\"double t80 = 1 + t65;\"\>"},
+    {"\<\"double t81 = t10*t27*t3*t41*t5*t80;\"\>"},
+    {"\<\"double t82 = t79 + t81;\"\>"},
+    {"\<\"double t84 = -(sigpar*t10*t82*t83);\"\>"},
+    {"\<\"double t85 = ast + t84;\"\>"},
+    {"\<\"gtt = -(t43*t50);\"\>"},
+    {"\<\"grr = (t49*t60*t63*t70*t75)/(4.*t57);\"\>"},
+    {"\<\"gthth = (t49*t60*t63*t70*t75*t77)/4.;\"\>"},
+    {"\<\"gpp = t49*t57*t73*t77*t83 - 4*t43*t50*pow(t85,2);\"\>"},
+    {"\<\"gtp = 2*t43*t50*t85;\"\>"}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{3.9477328900187693`*^9, 3.947733070953335*^9},
+ CellLabel->"Out[45]=",ExpressionUUID->"d650c6e0-56b9-4465-8ce5-75495eda16bb"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Metric and Metric Derivatives in C (first and second)",
+ FontWeight->"Bold",
+ FontVariations->{"Underline"->True}]], "Text",
+ CellChangeTimes->{
+  3.8482989590147862`*^9, {3.8482989890713053`*^9, 3.8482989916626663`*^9}, {
+   3.848299911372449*^9, 
+   3.848299933214315*^9}},ExpressionUUID->"650391a1-6b6b-4e1d-a311-\
+b9a87ae4fff1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OptimizeExpressionToC", "[", 
+   RowBox[{"{", 
+    RowBox[{
+    "gtt", ",", "grr", ",", "gthth", ",", "gpp", ",", "gtp", ",", "dgttdr", 
+     ",", "dgppdr", ",", "dgtpdr", ",", "dgttdr2", ",", "dgppdr2", ",", 
+     "dgtpdr2"}], "}"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.848301868358474*^9, 3.848301891941167*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"d8b54405-d109-416d-b18c-ebc0c6baef94"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Sqrt\>\"", "\[Rule]", "\"\<sqrt\>\""}], ",", " ", 
+      RowBox[{"\"\<Power(E,\>\"", "\[Rule]", "\"\<exp(\>\""}], ",", 
+      RowBox[{"\"\<Power\>\"", "\[Rule]", "\"\<pow\>\""}], ",", 
+      RowBox[{"\"\<Sin\>\"", "\[Rule]", "\"\<sin\>\""}], ",", 
+      RowBox[{"\"\<Cos\>\"", "\[Rule]", "\"\<cos\>\""}], ",", 
+      RowBox[{"\"\<out(0)\>\"", "\[Rule]", "\"\<gtt\>\""}], ",", 
+      RowBox[{"\"\<out(1)\>\"", "\[Rule]", "\"\<grr\>\""}], ",", 
+      RowBox[{"\"\<out(2)\>\"", "\[Rule]", "\"\<gthth\>\""}], ",", 
+      RowBox[{"\"\<out(3)\>\"", "\[Rule]", "\"\<gpp\>\""}], ",", 
+      RowBox[{"\"\<out(4)\>\"", "\[Rule]", "\"\<gtp\>\""}], ",", " ", 
+      RowBox[{"\"\<out(5)\>\"", "\[Rule]", "\"\<dgttdr\>\""}], ",", 
+      RowBox[{"\"\<out(6)\>\"", "\[Rule]", "\"\<dgppdr\>\""}], ",", 
+      RowBox[{"\"\<out(7)\>\"", "\[Rule]", "\"\<dgtpdr\>\""}], ",", 
+      RowBox[{"\"\<out(8)\>\"", "\[Rule]", "\"\<dgttdr2\>\""}], ",", 
+      RowBox[{"\"\<out(9)\>\"", "\[Rule]", "\"\<dgppdr2\>\""}], ",", 
+      RowBox[{"\"\<out(10)\>\"", "\[Rule]", "\"\<dgtpdr2\>\""}]}], "}"}]}], 
+   "]"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.7919132946575627`*^9, {3.79191353709107*^9, 3.791913617829862*^9}, {
+   3.79191365020982*^9, 3.791913662641223*^9}, {3.791913845341036*^9, 
+   3.7919139461668606`*^9}, {3.84830195788395*^9, 3.848302011247992*^9}},
+ NumberMarks->False,
+ CellLabel->"In[47]:=",ExpressionUUID->"15072fe5-5ad4-496c-a722-d87b085ea05e"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"double t2 = -mpar;\"\>"},
+    {"\<\"double t3 = r + t2;\"\>"},
+    {"\<\"double t5 = 1/sigpar;\"\>"},
+    {"\<\"double t6 = t3*t5;\"\>"},
+    {"\<\"double t11 = pow(t3,2);\"\>"},
+    {"\<\"double t12 = pow(sigpar,-2);\"\>"},
+    {"\<\"double t13 = t11*t12;\"\>"},
+    {"\<\"double t14 = -1 + t13;\"\>"},
+    {"\<\"double t15 = -qpar;\"\>"},
+    {"\<\"double t16 = pow(t14,t15);\"\>"},
+    {"\<\"double t17 = cos(th);\"\>"},
+    {"\<\"double t20 = 2*qpar;\"\>"},
+    {"\<\"double t18 = -t17;\"\>"},
+    {"\<\"double t19 = t18 + t6;\"\>"},
+    {"\<\"double t21 = pow(t19,t20);\"\>"},
+    {"\<\"double t22 = alp*t16*t21;\"\>"},
+    {"\<\"double t23 = t17 + t6;\"\>"},
+    {"\<\"double t24 = pow(t23,t20);\"\>"},
+    {"\<\"double t26 = alp*t16*t24;\"\>"},
+    {"\<\"double t27 = t22 + t26;\"\>"},
+    {"\<\"double t28 = t17*t27;\"\>"},
+    {"\<\"double t7 = -1 + t6;\"\>"},
+    {"\<\"double t8 = pow(t7,qpar);\"\>"},
+    {"\<\"double t9 = 1 + t6;\"\>"},
+    {"\<\"double t10 = pow(t9,qpar);\"\>"},
+    {"\<\"double t33 = pow(alp,2);\"\>"},
+    {"\<\"double t34 = -2*qpar;\"\>"},
+    {"\<\"double t35 = pow(t14,t34);\"\>"},
+    {"\<\"double t36 = -(t21*t24*t33*t35);\"\>"},
+    {"\<\"double t37 = 1 + t36;\"\>"},
+    {"\<\"double t38 = t3*t37*t5;\"\>"},
+    {"\<\"double t25 = -(alp*t16*t24);\"\>"},
+    {"\<\"double t29 = t22 + t25 + t28;\"\>"},
+    {"\<\"double t44 = pow(t9,t20);\"\>"},
+    {"\<\"double t40 = t21*t24*t33*t35;\"\>"},
+    {"\<\"double t41 = 1 + t38 + t40;\"\>"},
+    {"\<\"double t45 = pow(t29,2);\"\>"},
+    {"\<\"double t46 = t44*t45;\"\>"},
+    {"\<\"double t47 = pow(t41,2);\"\>"},
+    {"\<\"double t48 = t44*t47;\"\>"},
+    {"\<\"double t49 = t46 + t48;\"\>"},
+    {"\<\"double t52 = pow(ast,2);\"\>"},
+    {"\<\"double t53 = pow(r,-2);\"\>"},
+    {"\<\"double t54 = t52*t53;\"\>"},
+    {"\<\"double t55 = 1/r;\"\>"},
+    {"\<\"double t56 = -2*mpar*t55;\"\>"},
+    {"\<\"double t59 = -delp;\"\>"},
+    {"\<\"double t60 = pow(t14,t59);\"\>"},
+    {"\<\"double t61 = mpar*t5;\"\>"},
+    {"\<\"double t62 = 1 + t61;\"\>"},
+    {"\<\"double t63 = pow(t62,2);\"\>"},
+    {"\<\"double t64 = pow(t17,2);\"\>"},
+    {"\<\"double t65 = -t64;\"\>"},
+    {"\<\"double t66 = t13 + t65;\"\>"},
+    {"\<\"double t67 = 1/t66;\"\>"},
+    {"\<\"double t68 = t14*t67;\"\>"},
+    {"\<\"double t69 = pow(delp,2);\"\>"},
+    {"\<\"double t70 = pow(t68,t69);\"\>"},
+    {"\<\"double t71 = pow(sigpar,2);\"\>"},
+    {"\<\"double t72 = sin(th);\"\>"},
+    {"\<\"double t73 = pow(t72,2);\"\>"},
+    {"\<\"double t74 = t53*t71*t73;\"\>"},
+    {"\<\"double t75 = 1 + t54 + t56 + t74;\"\>"},
+    {"\<\"double t30 = -(alp*t16*t21);\"\>"},
+    {"\<\"double t31 = t26 + t28 + t30;\"\>"},
+    {"\<\"double t32 = t10*t29*t31*t8;\"\>"},
+    {"\<\"double t39 = -1 + t36 + t38;\"\>"},
+    {"\<\"double t42 = t10*t39*t41*t8;\"\>"},
+    {"\<\"double t43 = t32 + t42;\"\>"},
+    {"\<\"double t50 = 1/t49;\"\>"},
+    {"\<\"double t57 = 1 + t54 + t56;\"\>"},
+    {"\<\"double t77 = pow(r,2);\"\>"},
+    {"\<\"double t83 = 1/t43;\"\>"},
+    {"\<\"double t79 = t10*t14*t17*t29*t37;\"\>"},
+    {"\<\"double t80 = 1 + t65;\"\>"},
+    {"\<\"double t81 = t10*t27*t3*t41*t5*t80;\"\>"},
+    {"\<\"double t82 = t79 + t81;\"\>"},
+    {"\<\"double t84 = -(sigpar*t10*t82*t83);\"\>"},
+    {"\<\"double t85 = ast + t84;\"\>"},
+    {"\<\"double t91 = -1 + qpar;\"\>"},
+    {"\<\"double t92 = pow(t9,t91);\"\>"},
+    {"\<\"double t94 = pow(t7,t91);\"\>"},
+    {"\<\"double t98 = -1 + t15;\"\>"},
+    {"\<\"double t99 = pow(t14,t98);\"\>"},
+    {"\<\"double t101 = -1 + t20;\"\>"},
+    {"\<\"double t100 = -2*alp*qpar*t12*t21*t3*t99;\"\>"},
+    {"\<\"double t102 = pow(t19,t101);\"\>"},
+    {"\<\"double t103 = 2*alp*qpar*t102*t16*t5;\"\>"},
+    {"\<\"double t105 = pow(t23,t101);\"\>"},
+    {"\<\"double t107 = -2*alp*qpar*t12*t24*t3*t99;\"\>"},
+    {"\<\"double t108 = 2*alp*qpar*t105*t16*t5;\"\>"},
+    {"\<\"double t109 = t100 + t103 + t107 + t108;\"\>"},
+    {"\<\"double t110 = t109*t17;\"\>"},
+    {"\<\"double t117 = -1 + t34;\"\>"},
+    {"\<\"double t118 = pow(t14,t117);\"\>"},
+    {"\<\"double t119 = 4*qpar*t118*t12*t21*t24*t3*t33;\"\>"},
+    {"\<\"double t120 = -2*qpar*t102*t24*t33*t35*t5;\"\>"},
+    {"\<\"double t121 = -2*qpar*t105*t21*t33*t35*t5;\"\>"},
+    {"\<\"double t122 = t37*t5;\"\>"},
+    {"\<\"double t123 = t119 + t120 + t121;\"\>"},
+    {"\<\"double t124 = t123*t3*t5;\"\>"},
+    {"\<\"double t135 = pow(t9,t101);\"\>"},
+    {"\<\"double t104 = 2*alp*qpar*t12*t24*t3*t99;\"\>"},
+    {"\<\"double t106 = -2*alp*qpar*t105*t16*t5;\"\>"},
+    {"\<\"double t111 = t100 + t103 + t104 + t106 + t110;\"\>"},
+    {"\<\"double t127 = -4*qpar*t118*t12*t21*t24*t3*t33;\"\>"},
+    {"\<\"double t128 = 2*qpar*t102*t24*t33*t35*t5;\"\>"},
+    {"\<\"double t129 = 2*qpar*t105*t21*t33*t35*t5;\"\>"},
+    {"\<\"double t130 = t122 + t124 + t127 + t128 + t129;\"\>"},
+    {"\<\"double t93 = qpar*t29*t31*t5*t8*t92;\"\>"},
+    {"\<\"double t95 = qpar*t10*t29*t31*t5*t94;\"\>"},
+    {"\<\"double t96 = qpar*t39*t41*t5*t8*t92;\"\>"},
+    {"\<\"double t97 = qpar*t10*t39*t41*t5*t94;\"\>"},
+    {"\<\"double t112 = t10*t111*t31*t8;\"\>"},
+    {"\<\"double t113 = 2*alp*qpar*t12*t21*t3*t99;\"\>"},
+    {"\<\"double t114 = -2*alp*qpar*t102*t16*t5;\"\>"},
+    {"\<\"double t115 = t107 + t108 + t110 + t113 + t114;\"\>"},
+    {"\<\"double t116 = t10*t115*t29*t8;\"\>"},
+    {"\<\"double t125 = t119 + t120 + t121 + t122 + t124;\"\>"},
+    {"\<\"double t126 = t10*t125*t41*t8;\"\>"},
+    {"\<\"double t131 = t10*t130*t39*t8;\"\>"},
+    {"\<\"double t132 = t112 + t116 + t126 + t131 + t93 + t95 + t96 + \
+t97;\"\>"},
+    {"\<\"double t86 = pow(t85,2);\"\>"},
+    {"\<\"double t134 = pow(t49,-2);\"\>"},
+    {"\<\"double t136 = 2*qpar*t135*t45*t5;\"\>"},
+    {"\<\"double t137 = 2*qpar*t135*t47*t5;\"\>"},
+    {"\<\"double t138 = 2*t111*t29*t44;\"\>"},
+    {"\<\"double t139 = 2*t130*t41*t44;\"\>"},
+    {"\<\"double t140 = t136 + t137 + t138 + t139;\"\>"},
+    {"\<\"double t156 = pow(t43,-2);\"\>"},
+    {"\<\"double t145 = -(qpar*t82*t83*t92);\"\>"},
+    {"\<\"double t146 = 2*t10*t12*t17*t29*t3*t37;\"\>"},
+    {"\<\"double t147 = qpar*t14*t17*t29*t37*t5*t92;\"\>"},
+    {"\<\"double t148 = t10*t123*t14*t17*t29;\"\>"},
+    {"\<\"double t149 = qpar*t12*t27*t3*t41*t80*t92;\"\>"},
+    {"\<\"double t150 = t10*t27*t41*t5*t80;\"\>"},
+    {"\<\"double t151 = t10*t109*t3*t41*t5*t80;\"\>"},
+    {"\<\"double t152 = t10*t111*t14*t17*t37;\"\>"},
+    {"\<\"double t153 = t10*t130*t27*t3*t5*t80;\"\>"},
+    {"\<\"double t154 = t146 + t147 + t148 + t149 + t150 + t151 + t152 + \
+t153;\"\>"},
+    {"\<\"double t155 = -(sigpar*t10*t154*t83);\"\>"},
+    {"\<\"double t157 = sigpar*t10*t132*t156*t82;\"\>"},
+    {"\<\"double t158 = t145 + t155 + t157;\"\>"},
+    {"\<\"double t177 = -2 + qpar;\"\>"},
+    {"\<\"double t178 = pow(t9,t177);\"\>"},
+    {"\<\"double t180 = pow(qpar,2);\"\>"},
+    {"\<\"double t182 = pow(t7,t177);\"\>"},
+    {"\<\"double t187 = -2 + t15;\"\>"},
+    {"\<\"double t188 = pow(t14,t187);\"\>"},
+    {"\<\"double t189 = pow(sigpar,-4);\"\>"},
+    {"\<\"double t192 = -2 + t20;\"\>"},
+    {"\<\"double t195 = pow(sigpar,-3);\"\>"},
+    {"\<\"double t193 = pow(t19,t192);\"\>"},
+    {"\<\"double t197 = -4*alp*qpar*t11*t188*t189*t24*t98;\"\>"},
+    {"\<\"double t198 = -2*alp*qpar*t12*t24*t99;\"\>"},
+    {"\<\"double t199 = pow(t23,t192);\"\>"},
+    {"\<\"double t200 = 2*alp*qpar*t101*t12*t16*t199;\"\>"},
+    {"\<\"double t201 = -8*alp*t105*t180*t195*t3*t99;\"\>"},
+    {"\<\"double t202 = -4*alp*qpar*t11*t188*t189*t21*t98;\"\>"},
+    {"\<\"double t203 = -2*alp*qpar*t12*t21*t99;\"\>"},
+    {"\<\"double t204 = 2*alp*qpar*t101*t12*t16*t193;\"\>"},
+    {"\<\"double t205 = -8*alp*t102*t180*t195*t3*t99;\"\>"},
+    {"\<\"double t206 = t197 + t198 + t200 + t201 + t202 + t203 + t204 + \
+t205;\"\>"},
+    {"\<\"double t207 = t17*t206;\"\>"},
+    {"\<\"double t226 = -2 + t34;\"\>"},
+    {"\<\"double t227 = pow(t14,t226);\"\>"},
+    {"\<\"double t228 = 8*qpar*t11*t117*t189*t21*t227*t24*t33;\"\>"},
+    {"\<\"double t229 = 4*qpar*t118*t12*t21*t24*t33;\"\>"},
+    {"\<\"double t230 = -2*qpar*t101*t12*t193*t24*t33*t35;\"\>"},
+    {"\<\"double t231 = 16*t102*t118*t180*t195*t24*t3*t33;\"\>"},
+    {"\<\"double t232 = -2*qpar*t101*t12*t199*t21*t33*t35;\"\>"},
+    {"\<\"double t233 = 16*t105*t118*t180*t195*t21*t3*t33;\"\>"},
+    {"\<\"double t234 = -8*t102*t105*t12*t180*t33*t35;\"\>"},
+    {"\<\"double t235 = 2*t123*t5;\"\>"},
+    {"\<\"double t236 = t228 + t229 + t230 + t231 + t232 + t233 + \
+t234;\"\>"},
+    {"\<\"double t237 = t236*t3*t5;\"\>"},
+    {"\<\"double t251 = pow(t9,t192);\"\>"},
+    {"\<\"double t210 = 4*alp*qpar*t11*t188*t189*t24*t98;\"\>"},
+    {"\<\"double t211 = 2*alp*qpar*t12*t24*t99;\"\>"},
+    {"\<\"double t212 = -2*alp*qpar*t101*t12*t16*t199;\"\>"},
+    {"\<\"double t213 = 8*alp*t105*t180*t195*t3*t99;\"\>"},
+    {"\<\"double t214 = t202 + t203 + t204 + t205 + t207 + t210 + t211 + t212 \
++ t213;\"\>"},
+    {"\<\"double t240 = -8*qpar*t11*t117*t189*t21*t227*t24*t33;\"\>"},
+    {"\<\"double t241 = -4*qpar*t118*t12*t21*t24*t33;\"\>"},
+    {"\<\"double t242 = 2*qpar*t101*t12*t193*t24*t33*t35;\"\>"},
+    {"\<\"double t243 = -16*t102*t118*t180*t195*t24*t3*t33;\"\>"},
+    {"\<\"double t244 = 2*qpar*t101*t12*t199*t21*t33*t35;\"\>"},
+    {"\<\"double t245 = -16*t105*t118*t180*t195*t21*t3*t33;\"\>"},
+    {"\<\"double t246 = 8*t102*t105*t12*t180*t33*t35;\"\>"},
+    {"\<\"double t247 = t235 + t237 + t240 + t241 + t242 + t243 + t244 + t245 \
++ t246;\"\>"},
+    {"\<\"double t174 = pow(t49,-3);\"\>"},
+    {"\<\"double t175 = pow(t140,2);\"\>"},
+    {"\<\"double t179 = qpar*t12*t178*t29*t31*t8*t91;\"\>"},
+    {"\<\"double t181 = 2*t12*t180*t29*t31*t92*t94;\"\>"},
+    {"\<\"double t183 = qpar*t10*t12*t182*t29*t31*t91;\"\>"},
+    {"\<\"double t184 = qpar*t12*t178*t39*t41*t8*t91;\"\>"},
+    {"\<\"double t185 = 2*t12*t180*t39*t41*t92*t94;\"\>"},
+    {"\<\"double t186 = qpar*t10*t12*t182*t39*t41*t91;\"\>"},
+    {"\<\"double t190 = 4*alp*qpar*t11*t188*t189*t21*t98;\"\>"},
+    {"\<\"double t191 = 2*alp*qpar*t12*t21*t99;\"\>"},
+    {"\<\"double t194 = -2*alp*qpar*t101*t12*t16*t193;\"\>"},
+    {"\<\"double t196 = 8*alp*t102*t180*t195*t3*t99;\"\>"},
+    {"\<\"double t208 = t190 + t191 + t194 + t196 + t197 + t198 + t200 + t201 \
++ t207;\"\>"},
+    {"\<\"double t209 = t10*t208*t29*t8;\"\>"},
+    {"\<\"double t215 = t10*t214*t31*t8;\"\>"},
+    {"\<\"double t216 = 2*qpar*t111*t31*t5*t8*t92;\"\>"},
+    {"\<\"double t217 = 2*qpar*t10*t111*t31*t5*t94;\"\>"},
+    {"\<\"double t218 = 2*qpar*t115*t29*t5*t8*t92;\"\>"},
+    {"\<\"double t219 = 2*qpar*t10*t115*t29*t5*t94;\"\>"},
+    {"\<\"double t220 = 2*t10*t111*t115*t8;\"\>"},
+    {"\<\"double t221 = 2*qpar*t125*t41*t5*t8*t92;\"\>"},
+    {"\<\"double t222 = 2*qpar*t10*t125*t41*t5*t94;\"\>"},
+    {"\<\"double t223 = 2*qpar*t130*t39*t5*t8*t92;\"\>"},
+    {"\<\"double t224 = 2*qpar*t10*t130*t39*t5*t94;\"\>"},
+    {"\<\"double t225 = 2*t10*t125*t130*t8;\"\>"},
+    {"\<\"double t238 = t228 + t229 + t230 + t231 + t232 + t233 + t234 + t235 \
++ t237;\"\>"},
+    {"\<\"double t239 = t10*t238*t41*t8;\"\>"},
+    {"\<\"double t248 = t10*t247*t39*t8;\"\>"},
+    {"\<\"double t249 = t179 + t181 + t183 + t184 + t185 + t186 + t209 + t215 \
++ t216 + t217 + t218 + t219 + t220 + t221 + t222 + t223 + t224 + t225 + t239 \
++ t248;\"\>"},
+    {"\<\"double t252 = 2*qpar*t101*t12*t251*t45;\"\>"},
+    {"\<\"double t253 = 2*qpar*t101*t12*t251*t47;\"\>"},
+    {"\<\"double t254 = 2*t214*t29*t44;\"\>"},
+    {"\<\"double t255 = 8*qpar*t111*t135*t29*t5;\"\>"},
+    {"\<\"double t256 = pow(t111,2);\"\>"},
+    {"\<\"double t257 = 2*t256*t44;\"\>"},
+    {"\<\"double t258 = 8*qpar*t130*t135*t41*t5;\"\>"},
+    {"\<\"double t259 = pow(t130,2);\"\>"},
+    {"\<\"double t260 = 2*t259*t44;\"\>"},
+    {"\<\"double t261 = 2*t247*t41*t44;\"\>"},
+    {"\<\"double t262 = t252 + t253 + t254 + t255 + t257 + t258 + t260 + \
+t261;\"\>"},
+    {"\<\"double t161 = pow(r,-3);\"\>"},
+    {"\<\"double t162 = -2*t161*t52;\"\>"},
+    {"\<\"double t163 = 2*mpar*t53;\"\>"},
+    {"\<\"double t164 = t162 + t163;\"\>"},
+    {"\<\"double t277 = pow(t43,-3);\"\>"},
+    {"\<\"double t278 = pow(t132,2);\"\>"},
+    {"\<\"double t273 = -(qpar*t178*t5*t82*t83*t91);\"\>"},
+    {"\<\"double t274 = -2*qpar*t154*t83*t92;\"\>"},
+    {"\<\"double t275 = 2*qpar*t132*t156*t82*t92;\"\>"},
+    {"\<\"double t276 = 2*sigpar*t10*t132*t154*t156;\"\>"},
+    {"\<\"double t279 = -2*sigpar*t10*t277*t278*t82;\"\>"},
+    {"\<\"double t280 = 4*qpar*t17*t195*t29*t3*t37*t92;\"\>"},
+    {"\<\"double t281 = qpar*t12*t14*t17*t178*t29*t37*t91;\"\>"},
+    {"\<\"double t282 = 2*t10*t12*t17*t29*t37;\"\>"},
+    {"\<\"double t283 = 4*t10*t12*t123*t17*t29*t3;\"\>"},
+    {"\<\"double t284 = 2*qpar*t123*t14*t17*t29*t5*t92;\"\>"},
+    {"\<\"double t285 = t10*t14*t17*t236*t29;\"\>"},
+    {"\<\"double t286 = qpar*t178*t195*t27*t3*t41*t80*t91;\"\>"},
+    {"\<\"double t287 = 2*qpar*t12*t27*t41*t80*t92;\"\>"},
+    {"\<\"double t288 = t10*t206*t3*t41*t5*t80;\"\>"},
+    {"\<\"double t289 = 2*qpar*t109*t12*t3*t41*t80*t92;\"\>"},
+    {"\<\"double t290 = 2*t10*t109*t41*t5*t80;\"\>"},
+    {"\<\"double t291 = t10*t14*t17*t214*t37;\"\>"},
+    {"\<\"double t292 = 4*t10*t111*t12*t17*t3*t37;\"\>"},
+    {"\<\"double t293 = 2*qpar*t111*t14*t17*t37*t5*t92;\"\>"},
+    {"\<\"double t294 = 2*t10*t111*t123*t14*t17;\"\>"},
+    {"\<\"double t295 = 2*qpar*t12*t130*t27*t3*t80*t92;\"\>"},
+    {"\<\"double t296 = 2*t10*t130*t27*t5*t80;\"\>"},
+    {"\<\"double t297 = 2*t10*t109*t130*t3*t5*t80;\"\>"},
+    {"\<\"double t298 = t10*t247*t27*t3*t5*t80;\"\>"},
+    {"\<\"double t299 = t280 + t281 + t282 + t283 + t284 + t285 + t286 + t287 \
++ t288 + t289 + t290 + t291 + t292 + t293 + t294 + t295 + t296 + t297 + t298;\
+\"\>"},
+    {"\<\"double t300 = -(sigpar*t10*t299*t83);\"\>"},
+    {"\<\"double t301 = sigpar*t10*t156*t249*t82;\"\>"},
+    {"\<\"double t302 = t273 + t274 + t275 + t276 + t279 + t300 + \
+t301;\"\>"},
+    {"\<\"gtt = -(t43*t50);\"\>"},
+    {"\<\"grr = (t49*t60*t63*t70*t75)/(4.*t57);\"\>"},
+    {"\<\"gthth = (t49*t60*t63*t70*t75*t77)/4.;\"\>"},
+    {"\<\"gpp = t49*t57*t73*t77*t83 - 4*t43*t50*t86;\"\>"},
+    {"\<\"gtp = 2*t43*t50*t85;\"\>"},
+    {"\<\"dgttdr = t134*t140*t43 - t132*t50;\"\>"},
+    {"\<\"dgppdr = -(t132*t156*t49*t57*t73*t77) + 2*r*t49*t57*t73*t83 + \
+t164*t49*t73*t77*t83 + t140*t57*t73*t77*t83 - 8*t158*t43*t50*t85 + \
+4*t134*t140*t43*t86 - 4*t132*t50*t86;\"\>"},
+    {"\<\"dgtpdr = 2*t158*t43*t50 - 2*t134*t140*t43*t85 + \
+2*t132*t50*t85;\"\>"},
+    {"\<\"dgttdr2 = 2*t132*t134*t140 - 2*t174*t175*t43 + t134*t262*t43 - \
+t249*t50;\"\>"},
+    {"\<\"dgppdr2 = -8*pow(t158,2)*t43*t50 - 4*r*t132*t156*t49*t57*t73 - \
+2*t132*t156*t164*t49*t73*t77 - 2*t132*t140*t156*t57*t73*t77 - \
+t156*t249*t49*t57*t73*t77 + 2*t277*t278*t49*t57*t73*t77 + \
+4*r*t164*t49*t73*t83 + 4*r*t140*t57*t73*t83 + 2*t49*t57*t73*t83 + \
+2*t140*t164*t73*t77*t83 + t49*(-4*mpar*t161 + (6*t52)/pow(r,4))*t73*t77*t83 + \
+t262*t57*t73*t77*t83 + 16*t134*t140*t158*t43*t85 - 16*t132*t158*t50*t85 - \
+8*t302*t43*t50*t85 + 8*t132*t134*t140*t86 - 8*t174*t175*t43*t86 + \
+4*t134*t262*t43*t86 - 4*t249*t50*t86;\"\>"},
+    {"\<\"dgtpdr2 = -4*t134*t140*t158*t43 + 4*t132*t158*t50 + 2*t302*t43*t50 \
+- 4*t132*t134*t140*t85 + 4*t174*t175*t43*t85 - 2*t134*t262*t43*t85 + \
+2*t249*t50*t85;\"\>"}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{3.9477331245775228`*^9},
+ CellLabel->"Out[47]=",ExpressionUUID->"306fd6cf-669c-4c43-af24-80ec9852a6f9"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Diff. eq. for Chris",
+ FontWeight->"Bold",
+ FontVariations->{"Underline"->True}]], "Text",
+ CellChangeTimes->{{3.8483024760048723`*^9, 
+  3.848302507222259*^9}},ExpressionUUID->"9f0a68f6-e837-4804-9dd2-\
+9d017a40bc93"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OptimizeExpressionToC", "[", 
+   RowBox[{"{", 
+    RowBox[{
+    "gtt", ",", "gpp", ",", "gtp", ",", "gurr", ",", "guthth", ",", "dgttdr", 
+     ",", "dgrrdr", ",", "dgththdr", ",", "dgppdr", ",", "dgtpdr", ",", 
+     "dgttdth", ",", "dgrrdth", ",", "dgththdth", ",", "dgppdth", ",", 
+     "dgtpdth"}], "}"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.791902985296839*^9, 3.791903004865698*^9}, {
+   3.7919125378632326`*^9, 3.791912543126232*^9}, 3.79191328876989*^9, {
+   3.791915064948279*^9, 3.791915109344943*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"6c95c005-cead-4594-aa22-50f6e29f8096"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Sqrt\>\"", "\[Rule]", "\"\<sqrt\>\""}], ",", " ", 
+      RowBox[{"\"\<Power(E,\>\"", "\[Rule]", "\"\<exp(\>\""}], ",", 
+      RowBox[{"\"\<Power\>\"", "\[Rule]", "\"\<pow\>\""}], ",", 
+      RowBox[{"\"\<Sin\>\"", "\[Rule]", "\"\<sin\>\""}], ",", 
+      RowBox[{"\"\<Cos\>\"", "\[Rule]", "\"\<cos\>\""}], ",", 
+      RowBox[{"\"\<out(0)\>\"", "\[Rule]", "\"\<gtt\>\""}], ",", 
+      RowBox[{"\"\<out(1)\>\"", "\[Rule]", "\"\<gpp\>\""}], ",", 
+      RowBox[{"\"\<out(2)\>\"", "\[Rule]", "\"\<gtp\>\""}], ",", 
+      RowBox[{"\"\<out(3)\>\"", "\[Rule]", "\"\<gurr\>\""}], ",", 
+      RowBox[{"\"\<out(4)\>\"", "\[Rule]", "\"\<guthth\>\""}], ",", 
+      RowBox[{"\"\<out(5)\>\"", "\[Rule]", "\"\<dgttdr\>\""}], ",", 
+      RowBox[{"\"\<out(6)\>\"", "\[Rule]", "\"\<dgrrdr\>\""}], ",", 
+      RowBox[{"\"\<out(7)\>\"", "\[Rule]", "\"\<dgththdr\>\""}], ",", 
+      RowBox[{"\"\<out(8)\>\"", "\[Rule]", "\"\<dgppdr\>\""}], ",", 
+      RowBox[{"\"\<out(9)\>\"", "\[Rule]", "\"\<dgtpdr\>\""}], ",", 
+      RowBox[{"\"\<out(10)\>\"", "\[Rule]", "\"\<dgttdth\>\""}], ",", 
+      RowBox[{"\"\<out(11)\>\"", "\[Rule]", "\"\<dgrrdth\>\""}], ",", 
+      RowBox[{"\"\<out(12)\>\"", "\[Rule]", "\"\<dgththdth\>\""}], ",", 
+      RowBox[{"\"\<out(13)\>\"", "\[Rule]", "\"\<dgppdth\>\""}], ",", 
+      RowBox[{"\"\<out(14)\>\"", "\[Rule]", "\"\<dgtpdth\>\""}]}], "}"}]}], 
+   "]"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.7919132946575627`*^9, {3.79191353709107*^9, 3.791913617829862*^9}, {
+   3.79191365020982*^9, 3.791913662641223*^9}, {3.791913845341036*^9, 
+   3.7919139461668606`*^9}, {3.7919151180486984`*^9, 3.791915130876465*^9}, {
+   3.7919160343175845`*^9, 3.79191610220518*^9}, {3.7919161905987473`*^9, 
+   3.79191620429045*^9}},
+ NumberMarks->False,
+ CellLabel->"In[50]:=",ExpressionUUID->"1e7d99f5-8a39-485d-b190-dbf8caa9edf8"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"double t2 = -mpar;\"\>"},
+    {"\<\"double t3 = r + t2;\"\>"},
+    {"\<\"double t5 = 1/sigpar;\"\>"},
+    {"\<\"double t6 = t3*t5;\"\>"},
+    {"\<\"double t11 = pow(t3,2);\"\>"},
+    {"\<\"double t12 = pow(sigpar,-2);\"\>"},
+    {"\<\"double t13 = t11*t12;\"\>"},
+    {"\<\"double t14 = -1 + t13;\"\>"},
+    {"\<\"double t15 = -qpar;\"\>"},
+    {"\<\"double t16 = pow(t14,t15);\"\>"},
+    {"\<\"double t17 = cos(th);\"\>"},
+    {"\<\"double t20 = 2*qpar;\"\>"},
+    {"\<\"double t18 = -t17;\"\>"},
+    {"\<\"double t19 = t18 + t6;\"\>"},
+    {"\<\"double t21 = pow(t19,t20);\"\>"},
+    {"\<\"double t22 = alp*t16*t21;\"\>"},
+    {"\<\"double t23 = t17 + t6;\"\>"},
+    {"\<\"double t24 = pow(t23,t20);\"\>"},
+    {"\<\"double t26 = alp*t16*t24;\"\>"},
+    {"\<\"double t27 = t22 + t26;\"\>"},
+    {"\<\"double t28 = t17*t27;\"\>"},
+    {"\<\"double t7 = -1 + t6;\"\>"},
+    {"\<\"double t8 = pow(t7,qpar);\"\>"},
+    {"\<\"double t9 = 1 + t6;\"\>"},
+    {"\<\"double t10 = pow(t9,qpar);\"\>"},
+    {"\<\"double t33 = pow(alp,2);\"\>"},
+    {"\<\"double t34 = -2*qpar;\"\>"},
+    {"\<\"double t35 = pow(t14,t34);\"\>"},
+    {"\<\"double t36 = -(t21*t24*t33*t35);\"\>"},
+    {"\<\"double t37 = 1 + t36;\"\>"},
+    {"\<\"double t38 = t3*t37*t5;\"\>"},
+    {"\<\"double t25 = -(alp*t16*t24);\"\>"},
+    {"\<\"double t29 = t22 + t25 + t28;\"\>"},
+    {"\<\"double t44 = pow(t9,t20);\"\>"},
+    {"\<\"double t40 = t21*t24*t33*t35;\"\>"},
+    {"\<\"double t41 = 1 + t38 + t40;\"\>"},
+    {"\<\"double t30 = -(alp*t16*t21);\"\>"},
+    {"\<\"double t31 = t26 + t28 + t30;\"\>"},
+    {"\<\"double t32 = t10*t29*t31*t8;\"\>"},
+    {"\<\"double t39 = -1 + t36 + t38;\"\>"},
+    {"\<\"double t42 = t10*t39*t41*t8;\"\>"},
+    {"\<\"double t43 = t32 + t42;\"\>"},
+    {"\<\"double t45 = pow(t29,2);\"\>"},
+    {"\<\"double t46 = t44*t45;\"\>"},
+    {"\<\"double t47 = pow(t41,2);\"\>"},
+    {"\<\"double t48 = t44*t47;\"\>"},
+    {"\<\"double t49 = t46 + t48;\"\>"},
+    {"\<\"double t50 = 1/t49;\"\>"},
+    {"\<\"double t60 = 1/t43;\"\>"},
+    {"\<\"double t53 = t10*t14*t17*t29*t37;\"\>"},
+    {"\<\"double t54 = pow(t17,2);\"\>"},
+    {"\<\"double t55 = -t54;\"\>"},
+    {"\<\"double t56 = 1 + t55;\"\>"},
+    {"\<\"double t57 = t10*t27*t3*t41*t5*t56;\"\>"},
+    {"\<\"double t59 = t53 + t57;\"\>"},
+    {"\<\"double t61 = -(sigpar*t10*t59*t60);\"\>"},
+    {"\<\"double t62 = ast + t61;\"\>"},
+    {"\<\"double t65 = pow(ast,2);\"\>"},
+    {"\<\"double t66 = pow(r,-2);\"\>"},
+    {"\<\"double t67 = t65*t66;\"\>"},
+    {"\<\"double t68 = 1/r;\"\>"},
+    {"\<\"double t69 = -2*mpar*t68;\"\>"},
+    {"\<\"double t70 = 1 + t67 + t69;\"\>"},
+    {"\<\"double t72 = sin(th);\"\>"},
+    {"\<\"double t73 = pow(t72,2);\"\>"},
+    {"\<\"double t79 = pow(t14,delp);\"\>"},
+    {"\<\"double t80 = mpar*t5;\"\>"},
+    {"\<\"double t81 = 1 + t80;\"\>"},
+    {"\<\"double t82 = pow(t81,-2);\"\>"},
+    {"\<\"double t83 = t13 + t55;\"\>"},
+    {"\<\"double t84 = 1/t83;\"\>"},
+    {"\<\"double t85 = t14*t84;\"\>"},
+    {"\<\"double t86 = pow(delp,2);\"\>"},
+    {"\<\"double t91 = -t86;\"\>"},
+    {"\<\"double t92 = pow(t85,t91);\"\>"},
+    {"\<\"double t93 = pow(sigpar,2);\"\>"},
+    {"\<\"double t94 = t66*t73*t93;\"\>"},
+    {"\<\"double t95 = 1 + t67 + t69 + t94;\"\>"},
+    {"\<\"double t96 = 1/t95;\"\>"},
+    {"\<\"double t99 = -1 + qpar;\"\>"},
+    {"\<\"double t100 = pow(t9,t99);\"\>"},
+    {"\<\"double t102 = pow(t7,t99);\"\>"},
+    {"\<\"double t106 = -1 + t15;\"\>"},
+    {"\<\"double t107 = pow(t14,t106);\"\>"},
+    {"\<\"double t109 = -1 + t20;\"\>"},
+    {"\<\"double t108 = -2*alp*qpar*t107*t12*t21*t3;\"\>"},
+    {"\<\"double t110 = pow(t19,t109);\"\>"},
+    {"\<\"double t111 = 2*alp*qpar*t110*t16*t5;\"\>"},
+    {"\<\"double t113 = pow(t23,t109);\"\>"},
+    {"\<\"double t115 = -2*alp*qpar*t107*t12*t24*t3;\"\>"},
+    {"\<\"double t116 = 2*alp*qpar*t113*t16*t5;\"\>"},
+    {"\<\"double t117 = t108 + t111 + t115 + t116;\"\>"},
+    {"\<\"double t118 = t117*t17;\"\>"},
+    {"\<\"double t125 = -1 + t34;\"\>"},
+    {"\<\"double t126 = pow(t14,t125);\"\>"},
+    {"\<\"double t127 = 4*qpar*t12*t126*t21*t24*t3*t33;\"\>"},
+    {"\<\"double t128 = -2*qpar*t110*t24*t33*t35*t5;\"\>"},
+    {"\<\"double t129 = -2*qpar*t113*t21*t33*t35*t5;\"\>"},
+    {"\<\"double t130 = t37*t5;\"\>"},
+    {"\<\"double t131 = t127 + t128 + t129;\"\>"},
+    {"\<\"double t132 = t131*t3*t5;\"\>"},
+    {"\<\"double t148 = pow(t9,t109);\"\>"},
+    {"\<\"double t112 = 2*alp*qpar*t107*t12*t24*t3;\"\>"},
+    {"\<\"double t114 = -2*alp*qpar*t113*t16*t5;\"\>"},
+    {"\<\"double t119 = t108 + t111 + t112 + t114 + t118;\"\>"},
+    {"\<\"double t136 = -4*qpar*t12*t126*t21*t24*t3*t33;\"\>"},
+    {"\<\"double t137 = 2*qpar*t110*t24*t33*t35*t5;\"\>"},
+    {"\<\"double t138 = 2*qpar*t113*t21*t33*t35*t5;\"\>"},
+    {"\<\"double t139 = t130 + t132 + t136 + t137 + t138;\"\>"},
+    {"\<\"double t163 = pow(r,-3);\"\>"},
+    {"\<\"double t164 = -2*t163*t65;\"\>"},
+    {"\<\"double t174 = 2*mpar*t66;\"\>"},
+    {"\<\"double t157 = -delp;\"\>"},
+    {"\<\"double t158 = pow(t14,t157);\"\>"},
+    {"\<\"double t161 = pow(t81,2);\"\>"},
+    {"\<\"double t162 = pow(t85,t86);\"\>"},
+    {"\<\"double t156 = 1/t70;\"\>"},
+    {"\<\"double t149 = 2*qpar*t148*t45*t5;\"\>"},
+    {"\<\"double t150 = 2*qpar*t148*t47*t5;\"\>"},
+    {"\<\"double t151 = 2*t119*t29*t44;\"\>"},
+    {"\<\"double t152 = 2*t139*t41*t44;\"\>"},
+    {"\<\"double t153 = t149 + t150 + t151 + t152;\"\>"},
+    {"\<\"double t71 = pow(r,2);\"\>"},
+    {"\<\"double t175 = -2*t163*t73*t93;\"\>"},
+    {"\<\"double t177 = t164 + t174 + t175;\"\>"},
+    {"\<\"double t182 = -1 + t157;\"\>"},
+    {"\<\"double t183 = pow(t14,t182);\"\>"},
+    {"\<\"double t185 = -1 + t86;\"\>"},
+    {"\<\"double t186 = pow(t85,t185);\"\>"},
+    {"\<\"double t187 = pow(t83,-2);\"\>"},
+    {"\<\"double t188 = -2*t12*t14*t187*t3;\"\>"},
+    {"\<\"double t189 = 2*t12*t3*t84;\"\>"},
+    {"\<\"double t190 = t188 + t189;\"\>"},
+    {"\<\"double t101 = qpar*t100*t29*t31*t5*t8;\"\>"},
+    {"\<\"double t103 = qpar*t10*t102*t29*t31*t5;\"\>"},
+    {"\<\"double t104 = qpar*t100*t39*t41*t5*t8;\"\>"},
+    {"\<\"double t105 = qpar*t10*t102*t39*t41*t5;\"\>"},
+    {"\<\"double t120 = t10*t119*t31*t8;\"\>"},
+    {"\<\"double t121 = 2*alp*qpar*t107*t12*t21*t3;\"\>"},
+    {"\<\"double t122 = -2*alp*qpar*t110*t16*t5;\"\>"},
+    {"\<\"double t123 = t115 + t116 + t118 + t121 + t122;\"\>"},
+    {"\<\"double t124 = t10*t123*t29*t8;\"\>"},
+    {"\<\"double t134 = t127 + t128 + t129 + t130 + t132;\"\>"},
+    {"\<\"double t135 = t10*t134*t41*t8;\"\>"},
+    {"\<\"double t140 = t10*t139*t39*t8;\"\>"},
+    {"\<\"double t145 = t101 + t103 + t104 + t105 + t120 + t124 + t135 + \
+t140;\"\>"},
+    {"\<\"double t63 = pow(t62,2);\"\>"},
+    {"\<\"double t147 = pow(t49,-2);\"\>"},
+    {"\<\"double t179 = t164 + t174;\"\>"},
+    {"\<\"double t213 = pow(t43,-2);\"\>"},
+    {"\<\"double t202 = -(qpar*t100*t59*t60);\"\>"},
+    {"\<\"double t203 = 2*t10*t12*t17*t29*t3*t37;\"\>"},
+    {"\<\"double t204 = qpar*t100*t14*t17*t29*t37*t5;\"\>"},
+    {"\<\"double t205 = t10*t131*t14*t17*t29;\"\>"},
+    {"\<\"double t206 = qpar*t100*t12*t27*t3*t41*t56;\"\>"},
+    {"\<\"double t207 = t10*t27*t41*t5*t56;\"\>"},
+    {"\<\"double t208 = t10*t117*t3*t41*t5*t56;\"\>"},
+    {"\<\"double t209 = t10*t119*t14*t17*t37;\"\>"},
+    {"\<\"double t210 = t10*t139*t27*t3*t5*t56;\"\>"},
+    {"\<\"double t211 = t203 + t204 + t205 + t206 + t207 + t208 + t209 + \
+t210;\"\>"},
+    {"\<\"double t212 = -(sigpar*t10*t211*t60);\"\>"},
+    {"\<\"double t214 = sigpar*t10*t145*t213*t59;\"\>"},
+    {"\<\"double t215 = t202 + t212 + t214;\"\>"},
+    {"\<\"double t226 = 2*alp*qpar*t110*t16*t72;\"\>"},
+    {"\<\"double t229 = -2*alp*qpar*t113*t16*t72;\"\>"},
+    {"\<\"double t228 = -(t27*t72);\"\>"},
+    {"\<\"double t230 = t226 + t229;\"\>"},
+    {"\<\"double t231 = t17*t230;\"\>"},
+    {"\<\"double t227 = 2*alp*qpar*t113*t16*t72;\"\>"},
+    {"\<\"double t232 = t226 + t227 + t228 + t231;\"\>"},
+    {"\<\"double t234 = 2*qpar*t110*t24*t33*t35*t72;\"\>"},
+    {"\<\"double t235 = -2*qpar*t113*t21*t33*t35*t72;\"\>"},
+    {"\<\"double t236 = -2*qpar*t110*t24*t33*t35*t72;\"\>"},
+    {"\<\"double t237 = 2*qpar*t113*t21*t33*t35*t72;\"\>"},
+    {"\<\"double t238 = t236 + t237;\"\>"},
+    {"\<\"double t239 = t238*t3*t5;\"\>"},
+    {"\<\"double t240 = t234 + t235 + t239;\"\>"},
+    {"\<\"double t233 = 2*t232*t29*t44;\"\>"},
+    {"\<\"double t241 = 2*t240*t41*t44;\"\>"},
+    {"\<\"double t242 = t233 + t241;\"\>"},
+    {"\<\"double t256 = 1 + t157;\"\>"},
+    {"\<\"double t257 = pow(t14,t256);\"\>"},
+    {"\<\"double t244 = -2*alp*qpar*t110*t16*t72;\"\>"},
+    {"\<\"double t245 = t228 + t229 + t231 + t244;\"\>"},
+    {"\<\"double t246 = t10*t245*t29*t8;\"\>"},
+    {"\<\"double t247 = t10*t232*t31*t8;\"\>"},
+    {"\<\"double t248 = t10*t240*t39*t8;\"\>"},
+    {"\<\"double t249 = t236 + t237 + t239;\"\>"},
+    {"\<\"double t251 = t10*t249*t41*t8;\"\>"},
+    {"\<\"double t252 = t246 + t247 + t248 + t251;\"\>"},
+    {"\<\"double t280 = -(t10*t14*t29*t37*t72);\"\>"},
+    {"\<\"double t281 = 2*t10*t17*t27*t3*t41*t5*t72;\"\>"},
+    {"\<\"double t282 = t10*t230*t3*t41*t5*t56;\"\>"},
+    {"\<\"double t283 = t10*t14*t17*t238*t29;\"\>"},
+    {"\<\"double t284 = t10*t14*t17*t232*t37;\"\>"},
+    {"\<\"double t285 = t10*t240*t27*t3*t5*t56;\"\>"},
+    {"\<\"double t286 = t280 + t281 + t282 + t283 + t284 + t285;\"\>"},
+    {"\<\"double t287 = -(sigpar*t10*t286*t60);\"\>"},
+    {"\<\"double t288 = sigpar*t10*t213*t252*t59;\"\>"},
+    {"\<\"double t289 = t287 + t288;\"\>"},
+    {"\<\"gtt = -(t43*t50);\"\>"},
+    {"\<\"gpp = -4*t43*t50*t63 + t49*t60*t70*t71*t73;\"\>"},
+    {"\<\"gtp = 2*t43*t50*t62;\"\>"},
+    {"\<\"gurr = 4*t50*t70*t79*t82*t92*t96;\"\>"},
+    {"\<\"guthth = 4*t50*t66*t79*t82*t92*t96;\"\>"},
+    {"\<\"dgttdr = t147*t153*t43 - t145*t50;\"\>"},
+    {"\<\"dgrrdr = (t156*t158*t161*t162*t177*t49)/4. + \
+(t153*t156*t158*t161*t162*t95)/4. - \
+(delp*t12*t156*t161*t162*t183*t3*t49*t95)/2. - \
+(t158*t161*t162*t179*t49*t95)/(4.*pow(t70,2)) + \
+(t156*t158*t161*t186*t190*t49*t86*t95)/4.;\"\>"},
+    {"\<\"dgththdr = (t158*t161*t162*t177*t49*t71)/4. + \
+(r*t158*t161*t162*t49*t95)/2. + (t153*t158*t161*t162*t71*t95)/4. - \
+(delp*t12*t161*t162*t183*t3*t49*t71*t95)/2. + \
+(t158*t161*t186*t190*t49*t71*t86*t95)/4.;\"\>"},
+    {"\<\"dgppdr = -8*t215*t43*t50*t62 + 4*t147*t153*t43*t63 - 4*t145*t50*t63 \
++ 2*r*t49*t60*t70*t73 + t179*t49*t60*t71*t73 - t145*t213*t49*t70*t71*t73 + \
+t153*t60*t70*t71*t73;\"\>"},
+    {"\<\"dgtpdr = 2*t215*t43*t50 - 2*t147*t153*t43*t62 + \
+2*t145*t50*t62;\"\>"},
+    {"\<\"dgttdth = t147*t242*t43 - t252*t50;\"\>"},
+    {"\<\"dgrrdth = (t156*t158*t161*t162*t17*t49*t66*t72*t93)/2. + \
+(t156*t158*t161*t162*t242*t95)/4. - \
+(t156*t161*t17*t186*t187*t257*t49*t72*t86*t95)/2.;\"\>"},
+    {"\<\"dgththdth = (t158*t161*t162*t17*t49*t72*t93)/2. + \
+(t158*t161*t162*t242*t71*t95)/4. - \
+(t161*t17*t186*t187*t257*t49*t71*t72*t86*t95)/2.;\"\>"},
+    {"\<\"dgppdth = -8*t289*t43*t50*t62 + 4*t147*t242*t43*t63 - \
+4*t252*t50*t63 + 2*t17*t49*t60*t70*t71*t72 - t213*t252*t49*t70*t71*t73 + \
+t242*t60*t70*t71*t73;\"\>"},
+    {"\<\"dgtpdth = 2*t289*t43*t50 - 2*t147*t242*t43*t62 + \
+2*t252*t50*t62;\"\>"}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{3.947733215197974*^9},
+ CellLabel->"Out[50]=",ExpressionUUID->"d7ca5e30-e9f7-4fa2-ba2d-fa5fe53e2dd1"]
+}, Open  ]]
+},
+WindowSize->{711, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+Magnification:>1.5 Inherited,
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"10e71768-0cbb-445f-8392-059de75463ad"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 282, 5, 140, "Input",ExpressionUUID->"dacce11e-05cd-469a-adfa-a09cee30eb9f"],
+Cell[843, 27, 1079, 29, 118, "Input",ExpressionUUID->"b9cb99ec-1252-49a0-94bb-3ebf4cf23a0f"],
+Cell[1925, 58, 1883, 63, 140, "Input",ExpressionUUID->"cf927249-3818-4803-a1a0-177c6428f1a1"],
+Cell[3811, 123, 3250, 93, 530, "Input",ExpressionUUID->"1533019f-4291-4b58-81b1-d6a45b862f38"],
+Cell[7064, 218, 670, 10, 46, "Input",ExpressionUUID->"886c3b3f-de73-4440-9101-8f97773aa9b6"],
+Cell[7737, 230, 222, 5, 53, "Text",ExpressionUUID->"554d4e44-6d33-483b-ad15-cf13ef8138c5"],
+Cell[7962, 237, 1524, 37, 255, "Input",ExpressionUUID->"2fba5b45-fdd5-45ad-8b32-3b09c871882c"],
+Cell[9489, 276, 1602, 43, 192, "Input",ExpressionUUID->"0a1bccaf-053d-4501-9965-93d22fed4df6"],
+Cell[11094, 321, 253, 5, 53, "Text",ExpressionUUID->"52157d8e-5c76-4685-81da-ff32d252c4e3"],
+Cell[11350, 328, 420, 9, 78, "Input",ExpressionUUID->"35f76944-e9e1-4f20-be3c-a1c9f26be57e"],
+Cell[11773, 339, 324, 6, 53, "Text",ExpressionUUID->"43056800-6ec4-4ada-8577-8a51e99ad27d"],
+Cell[12100, 347, 2135, 55, 326, "Input",ExpressionUUID->"1c2b067c-2498-4235-9334-86f727d5075a"],
+Cell[14238, 404, 248, 5, 53, "Text",ExpressionUUID->"311dab83-c16f-41b7-bb39-09b4940bbb28"],
+Cell[14489, 411, 690, 16, 109, "Input",ExpressionUUID->"3429f6b9-6bd6-451c-bbd4-bd4d38011455"],
+Cell[15182, 429, 280, 6, 53, "Text",ExpressionUUID->"93bb8417-0937-49fb-a8cc-e52d81fac35b"],
+Cell[15465, 437, 823, 16, 109, "Input",ExpressionUUID->"b50dd0f8-16be-4be4-852e-467a8f0237b4"],
+Cell[16291, 455, 202, 4, 46, "Input",ExpressionUUID->"0da96ad6-d93a-482c-986a-46dab74afb48"],
+Cell[16496, 461, 151, 2, 46, "Input",ExpressionUUID->"278cf3a5-38a8-49ff-af04-aee9dfe0a4d1"],
+Cell[16650, 465, 266, 6, 78, "Input",ExpressionUUID->"31d65d0a-dc7c-40ca-af17-9ed4a194e8f8"],
+Cell[CellGroupData[{
+Cell[16941, 475, 898, 17, 202, "Input",ExpressionUUID->"770bf068-a9fb-4644-a99e-4263da69eda1"],
+Cell[17842, 494, 3910, 92, 2907, "Output",ExpressionUUID->"d650c6e0-56b9-4465-8ce5-75495eda16bb"]
+}, Open  ]],
+Cell[21767, 589, 356, 7, 53, "Text",ExpressionUUID->"650391a1-6b6b-4e1d-a311-b9a87ae4fff1"],
+Cell[22126, 598, 438, 9, 109, "Input",ExpressionUUID->"d8b54405-d109-416d-b18c-ebc0c6baef94"],
+Cell[CellGroupData[{
+Cell[22589, 611, 1581, 28, 295, "Input",ExpressionUUID->"15072fe5-5ad4-496c-a722-d87b085ea05e"],
+Cell[24173, 641, 15596, 310, 10921, "Output",ExpressionUUID->"306fd6cf-669c-4c43-af24-80ec9852a6f9"]
+}, Open  ]],
+Cell[39784, 954, 242, 5, 53, "Text",ExpressionUUID->"9f0a68f6-e837-4804-9dd2-9d017a40bc93"],
+Cell[40029, 961, 635, 12, 140, "Input",ExpressionUUID->"6c95c005-cead-4594-aa22-50f6e29f8096"],
+Cell[CellGroupData[{
+Cell[40689, 977, 1969, 34, 388, "Input",ExpressionUUID->"1e7d99f5-8a39-485d-b190-dbf8caa9edf8"],
+Cell[42661, 1013, 11543, 242, 8291, "Output",ExpressionUUID->"d7ca5e30-e9f7-4fa2-ba2d-fa5fe53e2dd1"]
+}, Open  ]]
+}
+]
+*)
+
